@@ -1,0 +1,78 @@
+---
+import Menu from "../components/Menu.astro";
+const Links = [
+    {
+        name: "Inicio",
+        link: "/",
+    },
+    {
+        name: "Productos",
+        link: "/productos",
+    },
+
+];
+---
+
+<header
+    class="z-[1000] bg-kai-100 dark:bg-kai-bg fixed top-0 lg:border-b-2 text-white-950 h-[90px] md:h-[90px] bg-white border-2 w-full flex items-center justify-between"
+>
+    <div
+        class="flex pl-5 lg:min-w-[190px] items-center justify-center w-fit text-center h-full lg:w-[200px]"
+    >
+        <Menu />
+        <div
+            class="hidden underline lg:block text-xl text-start w-full font-sans"
+        >
+            <a href="/" class="">
+                <p
+                    class="scale-90 duration-200 hover:scale-110 hover:cursor-pointer"
+                >
+                    <img src="/logo-grande.avif" class="w-fit h-fit" alt="" />
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="flex w-full h-full justify-center items-center">
+        <a class="flex md:hidden" href="/">
+            <img src="/logo-grande.avif" class="ml-[30px] w-[100px] h-[100px]" alt="">
+        </>
+        <div class="hidden md:flex">
+            {
+                Links.map((link) => (
+                    <div class="border-l hover:underline dark:border-white border-black">
+                        <a
+                            href={link.link}
+                            class="text-start text-lg block px-3 dark:text-white dark:hover:text-kai-text rounded md:bg-transparen  hover:text-kai-text"
+                        >
+                            {link.name}
+                        </a>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+    <div class="flex pr-5 items-center justify-around text-center h-full">
+        <button
+            class="hover:scale-110 transition-all duration-200 ease-in-out scale-90 hover:bg-kai-200 dark:hover:bg-kai-900 dark:bg-gray-300 bg-  shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+        >
+            <a
+                href="https://www.facebook.com/manantialde.pureza.7/"
+                target="_blank"
+            >
+                <i class="fab fa-facebook"></i>
+            </a>
+        </button>
+        <button
+            class="hover:scale-110 transition-all duration-200 ease-in-out scale-90 hover:bg-kai-200 dark:hover:bg-kai-900 dark:bg-gray-300 bg-  shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button"
+        >
+            <a
+                href="https://www.instagram.com/manantialdepureza/"
+                target="_blank"
+            >
+                <i class="fab fa-instagram"></i>
+            </a>
+        </button>
+    </div>
+</header>
