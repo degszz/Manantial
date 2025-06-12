@@ -1,25 +1,350 @@
 ---
-import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Carousel from "../components/Carousel.astro";
+import Carouselchill from "../components/Carouselchill.astro";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.avif" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
+		<title>Manantial</title>
 	</head>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
+	<Header />
+	<Carouselchill />
+	<body
+		class="flex flex-col justify-center items-center from-[#F5F6F8] bg-gradient-to-b via-[#def3ff] to-[#b6e9ff]"
+	>
+		<div class="mt-[140px] md:mt-[140px]">
+			<div
+				class="w-full lg:justify-start lg:min-w-[800px] mt-8 py-9 flex flex-col md:flex-row justify-center md:items-center
+			animate-flip-up animate-duration-1000 animate-delay-0"
+			>
+				<div class="text-start max-w-[280px] md:max-w-[400px]">
+					<div class="">
+						<h1 class="text-3xl text-dark font-sans">
+							<b
+								>Manantial: <br /> Agua de calidad, segura y saludable
+							</b>
+						</h1>
+						<p class="text-lg">
+							Ofrecemos a nuestros clientes productos de la mejor
+							calidad en agua Libre de Arsénico, Baja en Sodio y
+							Rica en Minerales
+						</p>
+					</div>
+					<div class="w-full flex items-center justify-start my-2">
+						<a
+							href="/start"
+							class="bg-white
+						mr-2 mb-2 px-2.5 py-1.5
+						 font-medium text-center
+						justify-center inline-flex items-center flex-row
+						rounded-lg border gap-x-2 opacity-90
+						cursor-pointer hover:bg-kai-hover dark:bg-kai-hover dark:hover:bg-kai-bg hover:text-white
+						hover:opacity-100 hover:bg-black-600
+						hover:scale-110 hover:shadow-lg
+						dark:focus:ring-black-300
+						focus:ring-2 focus:outline-none focus:ring-black-30
+						transition-all duration-200 ease-in-out scale-90"
+							><svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
+								><path
+									stroke="none"
+									d="M0 0h24v24H0z"
+									fill="none"></path><path
+									d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+								></path></svg
+							></a
+						>
+						<a
+							href="https://www.instagram.com/manantialdepureza/"
+							class="bg-white
+						mr-2 mb-2 px-2.5 py-1.5
+						 font-medium text-center
+						justify-center inline-flex items-center flex-row
+						rounded-lg border gap-x-2 opacity-90
+						cursor-pointer dark:bg-kai-hover dark:hover:bg-kai-bg hover:bg-kai-hover hover:text-white
+						hover:opacity-100 hover:bg-black-600
+						hover:scale-110 hover:shadow-lg
+						dark:focus:ring-black-300
+						focus:ring-2 focus:outline-none focus:ring-black-30
+						transition-all duration-200 ease-in-out scale-90"
+							target="_blank"
+							><svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
+								><path
+									stroke="none"
+									d="M0 0h24v24H0z"
+									fill="none"></path><path
+									d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+								></path><path
+									d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"
+								></path><path d="M16.5 7.5v.01"></path></svg
+							></a
+						>
+					</div>
+				</div>
+				<div class="w-full md:w-fit flex justify-center">
+					<img
+						src="/water.png"
+						class="w-[200px] md:w-[300px] md:h-[300px]
+							animate-jump animate-infinite animate-duration-[2500ms] animate-delay-1000"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex flex-col items-center justify-center text-center my-5">
+			<h2 class="text-3xl underline"><b>QUIÉNES SOMOS?</b></h2>
+			<p class="text-lg p-6">
+				<b>Manantial de Pureza</b> es una empresa de <b>San Miguel del Monte</b> fundada en 2014. <br class="hidden md:block">
+				Es un proyecto familiar que se dedica a la elaboración, envasado
+				y distribución de agua y soda en envases retornables. <br class="hidden md:block"> En 2021 lanzamos
+				nuestra nueva linea <b class="">Manantial Bajo Cero</b> dedicada a la producción
+				y distribución de hielo.
+			</p>
+		</div>
+
+		<div class=" bg-[#F5F6F8] w-full flex flex-col items-center justify-center">
+			<div class="flex flex-col items-center justify-center pt-6">
+				<h2 class="text-3xl underline"><b>Porque elegirnos?</b></h2>
+				<span class="text-lg"
+					>Aprovecha todos nuestros beneficios
+				</span>
+			</div>
+			<div>
+				<div class="flex flex-col md:flex-row min-h-[200px]">
+					<div
+						class="my-2 md:mx-2 flex flex-col max-w-[300px] justify-center items-center"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="70"
+							height="70"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="bg-white icon p-3 border-2 rounded-full border-[#fff] icon-tabler icons-tabler-outline icon-tabler-shopping-cart"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path
+								d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"
+							></path><path
+								d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"
+							></path><path d="M17 17h-11v-14h-2"></path><path
+								d="M6 5l14 1l-1 7h-13"></path></svg
+						>
+						<div
+							class="flex flex-col items-center text-center justify-center"
+						>
+							<h2 class="text-xl underline">
+								TODOS LOS MEDIOS DE PAGO
+							</h2>
+							<p class="text-lg">
+								Ofrecemos todas las opciones de pago, efectivo,
+								tarjeta, mercado pago, transferencia, etc
+							</p>
+						</div>
+					</div>
+					<div
+						class="my-2 md:mx-2 flex flex-col max-w-[300px] justify-center items-center"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="70"
+							height="70"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="bg-white icon p-3 border-2 rounded-full border-[#fff] icon-tabler icons-tabler-outline icon-tabler-home"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path d="M5 12l-2 0l9 -9l9 9l-2 0"
+							></path><path
+								d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
+							></path><path
+								d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"
+							></path></svg
+						>
+						<div
+							class="flex flex-col items-center text-center justify-center"
+						>
+							<h2 class="text-xl underline">
+								PUERTA A PUERTA
+							</h2>
+							<p class="text-lg">
+								Nuestro servicio de repartidores te permite
+								disfrutar del agua segura y saludable sin que
+								tengas que moverte de tu casa.
+							</p>
+						</div>
+					</div>
+					<div
+						class="my-2 md:mx-2 flex flex-col max-w-[300px] justify-center items-center"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="70"
+							height="70"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="bg-white icon p-3 border-2 rounded-full border-[#fff] icon-tabler icons-tabler-outline icon-tabler-shopping-cart-discount"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+							></path><path d="M12.5 17h-6.5v-14h-2"></path><path
+								d="M6 5l14 1l-.859 6.011m-6.141 .989h-7"
+							></path><path d="M16 21l5 -5"></path><path
+								d="M21 21v.01"></path><path d="M16 16v.01"
+							></path></svg
+						>
+						<div
+							class="flex flex-col items-center text-center justify-center"
+						>
+							<h2 class="text-xl underline">
+								MAS AHORRO
+							</h2>
+							<p class="text-lg">
+								La mejor relacion Precio/Calidad del mercado en
+								todos nuestros producto.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-col md:flex-row min-h-[300px]">
+					<div
+						class="my-2 md:mx-2 flex flex-col max-w-[300px] justify-center items-center"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="70"
+							height="70"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="bg-white icon p-3 border-2 rounded-full border-[#fff] icon-tabler icons-tabler-outline icon-tabler-phone"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path
+								d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+							></path></svg
+						>
+						<div
+							class="flex flex-col items-center text-center justify-center"
+						>
+							<h2 class="text-xl underline">
+								EXCELENTE ATENCION
+							</h2>
+							<p class="text-lg">
+								Estar siempre, todos los días para recibir tu
+								pedido o consulta.
+							</p>
+						</div>
+					</div>
+					<div
+						class="my-2 md:mx-2 flex flex-col max-w-[300px] justify-center items-center"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="70"
+							height="70"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="bg-white icon p-3 border-2 rounded-full border-[#fff] icon-tabler icons-tabler-outline icon-tabler-users"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path
+								d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"
+							></path><path
+								d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
+							></path><path d="M16 3.13a4 4 0 0 1 0 7.75"
+							></path><path d="M21 21v-2a4 4 0 0 0 -3 -3.85"
+							></path></svg
+						>
+						<div
+							class="flex flex-col items-center text-center justify-center"
+						>
+							<h2 class="text-xl underline">
+								REPARTIDORES DE CONFIANZA
+							</h2>
+							<p class="text-lg">
+								Entregan tu pedido en tu domicilio o empresa al
+								horario que vos coordines con ellos
+							</p>
+						</div>
+					</div>
+					<div
+						class="my-2 md:mx-2 flex flex-col max-w-[300px] justify-center items-center"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="70"
+							height="70"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="bg-white icon p-3 border-2 rounded-full border-[#fff] icon-tabler icons-tabler-outline icon-tabler-brand-google-fit"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path
+								d="M12 8.866l-2.733 -2.734a3.866 3.866 0 0 0 -5.467 5.467l2.733 2.734l5.467 5.467l8.202 -8.201a3.866 3.866 0 0 0 -5.469 -5.466l-8.201 8.2"
+							></path></svg
+						>
+						<div
+							class="flex flex-col items-center text-center justify-center"
+						>
+							<h2 class="text-xl underline">
+								BAJO SODIO
+							</h2>
+							<p class="text-lg">
+								Todos nuestros productos se elaboran con agua
+								baja en sodio. Excelente Para la Salud Humana.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
+
+	<Footer />
 </html>

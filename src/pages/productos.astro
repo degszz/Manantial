@@ -1,0 +1,78 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Carousel from "../components/Carousel.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.avif" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Productos</title>
+    </head>
+
+    <Header />
+    <body
+        class="flex flex-col justify-center items-center from-[#F5F6F8] bg-gradient-to-b via-[#def3ff] to-[#b6e9ff]"
+    >
+        <div class="mt-[90px] md:mt-[90px]">
+            <div class="pt-8 md:max-w-[1000px]">
+                <div class="text-center px-8 py-4">
+                    <h2 class="text-3xl underline"><b>Productos</b></h2>
+                    <span class="text-lg text-center"
+                        >Contamos dentro de Manantial de Pureza con Productos
+                        como Agua y Soda, en diferentes medidas y dentro de
+                        Manantial Bajo Cero con Productos como el Hielo.</span
+                    >
+                </div>
+                <Carousel />
+
+                <div class=" bg-[#fff] flex flex-col justify-center items-center">
+                    <img src="/productos.png" class="w-full h-full " alt="">
+                    <!-- <h2 class="underline text-lg">
+                        <b>MANANTIAL DE PUREZA:</b>
+                    </h2>
+                    <span>AGUA Y SODA</span>
+                    <p class="text-center">
+                        Ofrecemos a nuestros clientes productos de la mejor
+                        calidad en agua Libre de Arsénico, Baja en Sodio y Rica
+                        en Minerales
+                    </p>
+                    <div class="text-start min-w-[300px]">
+                        <li>Bidón x20 litros</li>
+                        <li>Bidón x12 litros</li>
+                        <li>Descartable 6 litros</li>
+                        <li>Soda x1500Cc</li>
+                        <li>Soda x650Cc</li>
+                        <li>Dispenser Natural</li>
+                        <li>Dispenser frio calor</li>
+                        <li>Canastas de soda</li>
+                    </div> -->
+                </div>
+
+                <div class="bg-[#fff] flex flex-col justify-center items-center ">
+                    <img src="/bajocero.png" class="w-full h-full " alt="">
+                    <!-- <h2 class="underline text-lg">
+                        <b>MANANTIAL BAJO CERO:</b>
+                    </h2>
+                    <span>HIELO</span>
+                    <p class="text-center">
+                        Tomando de base la calidad de nuestra agua, producimos
+                        un hielo premium 100% purificado.
+                    </p>
+                    <li>Bolsa de 2 kg (cubo, rolito y picado)</li>
+                    <li>Bolsa de 4 kg (cubo, rolito y picado)</li>
+                    <li>Bolsa de 8 Kg (cubo, rolito y picado)</li>
+                    <li>Bolsa de 10 Kg (cubo, rolito y picado)</li>
+                    <li>Bolsa de 15 Kg (cubo, rolito y picado)</li>
+                    <li>Barra de 12 Kg</li> -->
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <Footer />
+</html>
