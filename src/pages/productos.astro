@@ -2,7 +2,63 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import Carousel from "../components/Carousel.astro";
+const data = [
+    {
+        img: "/bidown.png",
+        text: "BIDON 20 lts",
+        slug: "bidon",
+        description: "Bidon de 20 lts, ideal para la comodidad de la casa.",
+        price: "Consultar",
+        time: "2hs",
+        cantity: "20 lts",
+        whats: "https://wa.me/+5492226502801?text=Hola Manantial!%20Quiero%20solicitar%20un%20Bidon%20de%2020litros.",
+        button: "Solicitar Bidon",
+    },
+    {
+        img: "/bidonn.png",
+        text: "BIDON 12 lts",
+        slug: "bidonC",
+        description: "Bidon de 12 lts, ideal para la comodidad de la casa.",
+        price: "Consultar",
+        time: "2hs",
+        cantity: "12 lts",
+        whats: "https://wa.me/+5492226502801?text=Hola Manantial!%20Quiero%20solicitar%20un%20Bidon%20de%2012litros.",
+        button: "Solicitar Bidon",
+    },
+    {
+        img: "/descartable.png",
+        text: "DESCARTABLE 6 lts",
+        slug: "bidonD",
+        description: "Bidon descartable de 6 lts, ideal para eventos.",
+        price: "Consultar",
+        time: "2hs",
+        cantity: "6 lts",
+        whats: "https://wa.me/+5492226502801?text=Hola Manantial!%20Quiero%20solicitar%20un%20Bidon%20Descartable%20de%206litros",
+        button: "Solicitar Bidones",
+    },
+    {
+        img: "/cifon.jpeg",
+        text: "CIFON",
+        slug: "soda",
+        description: "Cifones de soda, con gas y sin gas, de 1500Cc.",
+        price: "Consultar",
+        time: "2hs",
+        cantity: "1500Cc",
+        whats: "https://wa.me/+5492226502801?text=Hola Manantial!%20Quiero%20solicitar%20un%20cifón%20de%201500cc.",
+        button: "Solicitar Cifones",
+    },
+    {
+        img: "/hielo.jpeg",
+        text: "HIELO",
+        slug: "hielo",
+        description: "hielo premium 100% purificado, cubo, rolito y picado.",
+        price: "Consultar",
+        time: "2hs",
+        cantity: "2kg a 12 kg",
+        whats: "https://wa.me/+5492226502801?text=Hola Manantial!%20Quiero%20solicitar%20una%20Bolsa%20de%20Hielo.",
+        button: "Solicitar Bolsa de Hielo",
+    },
+];
 ---
 
 <html lang="en">
@@ -11,7 +67,7 @@ import Carousel from "../components/Carousel.astro";
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.avif" />
         <meta name="generator" content={Astro.generator} />
-        <title>Productos</title>
+        <title>productos</title>
     </head>
 
     <Header />
@@ -28,50 +84,177 @@ import Carousel from "../components/Carousel.astro";
                         Manantial Bajo Cero con Productos como el Hielo.</span
                     >
                 </div>
-                <Carousel />
-
-                <div class=" bg-[#fff] flex flex-col justify-center items-center">
-                    <img src="/productos.png" class="w-full h-full " alt="">
-                    <!-- <h2 class="underline text-lg">
-                        <b>MANANTIAL DE PUREZA:</b>
-                    </h2>
-                    <span>AGUA Y SODA</span>
-                    <p class="text-center">
-                        Ofrecemos a nuestros clientes productos de la mejor
-                        calidad en agua Libre de Arsénico, Baja en Sodio y Rica
-                        en Minerales
-                    </p>
-                    <div class="text-start min-w-[300px]">
-                        <li>Bidón x20 litros</li>
-                        <li>Bidón x12 litros</li>
-                        <li>Descartable 6 litros</li>
-                        <li>Soda x1500Cc</li>
-                        <li>Soda x650Cc</li>
-                        <li>Dispenser Natural</li>
-                        <li>Dispenser frio calor</li>
-                        <li>Canastas de soda</li>
-                    </div> -->
-                </div>
-
-                <div class="bg-[#fff] flex flex-col justify-center items-center ">
-                    <img src="/bajocero.png" class="w-full h-full " alt="">
-                    <!-- <h2 class="underline text-lg">
-                        <b>MANANTIAL BAJO CERO:</b>
-                    </h2>
-                    <span>HIELO</span>
-                    <p class="text-center">
-                        Tomando de base la calidad de nuestra agua, producimos
-                        un hielo premium 100% purificado.
-                    </p>
-                    <li>Bolsa de 2 kg (cubo, rolito y picado)</li>
-                    <li>Bolsa de 4 kg (cubo, rolito y picado)</li>
-                    <li>Bolsa de 8 Kg (cubo, rolito y picado)</li>
-                    <li>Bolsa de 10 Kg (cubo, rolito y picado)</li>
-                    <li>Bolsa de 15 Kg (cubo, rolito y picado)</li>
-                    <li>Barra de 12 Kg</li> -->
-                </div>
             </div>
         </div>
+        <ul class="w-full h-full">
+            {
+                data.map((item, index) => (
+                    <div key={index} class="w-full ">
+                        <div class="text-black w-full h-full bg-transparent flex justify-center py-4 border">
+                            <div class="flex justify-between w-[400px] md: lg:w-[700px]">
+                                <div class="p-4 flex flex-col justify-around">
+                                    <div class="w-full">
+                                        <h3 class="text-lg underline">
+                                            <b>{item.text}:</b>
+                                        </h3>
+                                        <p class="text-sm max-w-[200px] md:max-w-[250px] lg:max-w-[450px]">
+                                            {item.description}
+                                        </p>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <div class="flex flex-col">
+                                            {/* PRICE */}
+                                            <div class="flex items-center justify-center pr-2">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="#0071a6"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-receipt-2"
+                                                >
+                                                    <>
+                                                        <path
+                                                            stroke="none"
+                                                            d="M0 0h24v24H0z"
+                                                            fill="none"
+                                                        />
+                                                        <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2" />
+                                                        <path d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5" />
+                                                    </>
+                                                </svg>
+                                                <span class="text-md text-[#0071a6]">
+                                                    <b>{item.price}</b>
+                                                </span>
+                                            </div>
+
+                                            {/* TIME */}
+                                            <div class="flex items-center justify-center pr-2">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="#0071a6"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-clock"
+                                                >
+                                                    <>
+                                                        <path
+                                                            stroke="none"
+                                                            d="M0 0h24v24H0z"
+                                                            fill="none"
+                                                        />
+                                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                                        <path d="M12 7v5l3 3" />
+                                                    </>
+                                                </svg>
+                                                <span class="text-md text-[#0071a6]">
+                                                    <b>{item.time}</b>
+                                                </span>
+                                            </div>
+
+                                            {/* CANTITY */}
+                                            <div class="flex items-center justify-center">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="#0071a6"
+                                                    fill="#0071a6"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-scale"
+                                                >
+                                                    <>
+                                                        <path
+                                                            stroke="none"
+                                                            d="M0 0h24v24H0z"
+                                                            fill="none"
+                                                        />
+                                                        <path d="M7 20l10 0" />
+                                                        <path d="M6 6l6 -1l6 1" />
+                                                        <path d="M12 3l0 17" />
+                                                        <path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
+                                                        <path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" />
+                                                    </>
+                                                </svg>
+                                                <span class="text-md text-[#0071a6]">
+                                                    <b>{item.cantity}</b>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <a
+                                            href={item.whats}
+                                            class="bg-white
+						mr-2 mb-2 px-2.5 py-1.5
+						 font-medium text-center
+						justify-center inline-flex items-center flex-row
+						rounded-lg border gap-x-2 opacity-90
+						cursor-pointer hover:bg-kai-hover dark:bg-kai-hover dark:hover:bg-kai-bg hover:text-white
+						hover:opacity-100 hover:bg-black-600
+						hover:scale-110 hover:shadow-lg
+						dark:focus:ring-black-300
+						focus:ring-2 focus:outline-none focus:ring-black-30
+						transition-all duration-200 ease-in-out scale-90"
+                                        >
+                                            <div class="flex items-center">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
+                                                >
+                                                    <>
+                                                        <path
+                                                            stroke="none"
+                                                            d="M0 0h24v24H0z"
+                                                            fill="none"
+                                                        />
+                                                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                                                        <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                                                    </>
+                                                </svg>
+                                                <span>{item.button}</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <img
+                                        width={150}
+                                        height={200}
+                                        src={item.img}
+                                        class="max-h-[200px] min-h-[200px] rounded-xl mr-3"
+                                        alt={item.text}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </ul>
     </body>
 
     <Footer />

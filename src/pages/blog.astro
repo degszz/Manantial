@@ -1,0 +1,125 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Carousel from "../components/Carousel.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.avif" />
+        <meta name="generator" content={Astro.generator} />
+        <title>blog</title>
+    </head>
+
+    <Header />
+    <body
+        class="flex flex-col justify-center items-center from-[#F5F6F8] bg-gradient-to-b via-[#def3ff] to-[#b6e9ff]"
+    >
+        <div class="mt-[90px] md:mt-[90px]">
+            <div
+                class="pt-8 md:max-w-[1000px] flex flex-col justify-center items-center w-full mx-auto"
+            >
+                <div class="text-center py-4 max-w-[700px] mx-4">
+                    <h2 class="text-3xl underline"><b>NOSOTROS:</b></h2>
+                    <div class="mt-4">
+                        <span class="text-md text-center"
+                            >Manantial de Pureza, es una empresa de San Miguel
+                            del Monte fundada en febrero de 2014, que mediante
+                            una importante inversión en la instalación de una
+                            planta "Modelo" con tecnología de última generación
+                            ofrece a los consumidores la más alta calidad de
+                            Agua y Soda.
+                        </span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-md text-center">
+                            Contando con la adquisición de tecnología productiva
+                            de vanguardia y la implementación de rigurosos
+                            procesos de calidad, logramos nuestro principal
+                            objetivo: "Obtener Agua Libre de Arsénico, Baja en
+                            Sodio y Rica en Minerales.
+                        </span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-md text-center">
+                            En Manantial de Pureza hemos decidido elaborar un
+                            producto comercialmente viable, pero por sobre todo,
+                            socialmente responsable. Por eso, las
+                            características del producto están visiblemente
+                            destacadas en las etiquetas y los análisis químicos
+                            y bacteriológicos que se encuentran a total
+                            disposición del público.
+                        </span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-md text-center">
+                            Además de la calidad superior del agua Manantial de
+                            Pureza, es importante destacar que la extracción de
+                            la Fuente Natural, el tratamiento y el envasado se
+                            realizan en San Miguel del Monte. Por eso,
+                            aseguramos la provisión continua de nuestros
+                            productos en esta localidad y sus alrededores,
+                            estando siempre disponible mediante nuestra amplia
+                            red de distribuidores.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <Carousel />
+            </div>
+            <div
+                class="pt-8 md:max-w-[1000px] flex flex-col justify-center items-center w-full mx-auto"
+            >
+                <div class="text-center py-4 max-w-[700px]">
+                    <h2 class="text-3xl underline">
+                        <b>NUESTROS ESTÁNDARES DE CALIDAD:</b>
+                    </h2>
+                    <div class="mt-4">
+                        <span class="text-md text-center">
+                            Nuestras normas de elaboración aseguran la calidad y
+                            confiabilidad de todos los productos que se
+                            comercializan bajo este sello. Para ello se
+                            establece un riguroso control en todas las etapas
+                            del proceso productivo, desde la captación de la
+                            materia prima (fuente de agua) hasta la distribución
+                            del producto al cliente final.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 md:max-w-[1000px] flex flex-col justify-center items-center w-full mx-auto"
+            >
+                <div class="text-center py-4 max-w-[700px]">
+                    <h2 class="text-3xl underline">
+                        <b>ANALISIS</b>
+                    </h2>
+                    <div class="mt-4">
+                        <span class="text-md text-center">
+                            Aquí podrás descargar el análisis de nuestros
+                            productos
+                        </span>
+                    </div>
+                    
+                </div>
+                <a
+                        class="p-2.5 flex items-center bg-blue-400 hover:cursor-pointer transition-all duration-200 ease-in-out scale-90 hover:scale-110 text-white hover:bg-blue-600 m-4 rounded-xl shadow-lg dark:bg-kai-900 dark:hover:bg-kai-800
+                        w-fit
+                        "
+                        href="
+                    https://www.manantialdepureza.com.ar/_files/ugd/e97127_e6313c48e6a74754b2d54f5cf6d05083.pdf
+                    "
+                        target="_blank"
+                    >
+                    DESCARGAR PDF
+                </a>
+            </div>
+        </div>
+    </body>
+
+    <Footer />
+</html>

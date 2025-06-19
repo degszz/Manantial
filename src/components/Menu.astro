@@ -1,8 +1,16 @@
 ---
 const Links = [
     {
-        name: "",
-        link: "/",
+        name: "bidon",
+        link: "bidon",
+    },
+    {
+        name: "soda",
+        link: "soda",
+    },
+    {
+        name: "hielo",
+        link: "hielo",
     },
 ];
 ---
@@ -59,8 +67,32 @@ const Links = [
                                 Productos
                             </a>
                         </li>
+                        <li class="border-l dark:border-white border-black">
+                            <a
+                                href="/blog"
+                                class="hover:underline text-start btn block py-2 pl-3 dark:text-white dark:hover:text-kai-text rounded md:bg-transparen md:py-1 hover:text-kai-text"
+                                aria-current="page"
+                            >
+                                blog
+                            </a>
+                        </li>
                     </ul>
-                    
+                    <ul class="w-fit mb-2">
+                        <h3 class="mt-2"><b>Productos:</b></h3>
+                        {
+                            Links.map((link) => (
+                                <li class="border-l dark:border-white border-black">
+                                    <a
+                                        href={`${link.link}`}
+                                        class="hover:underline text-start btn block py-2 pl-3 dark:text-white dark:hover:text-kai-text rounded md:bg-transparen md:py-1 hover:text-kai-text"
+                                        aria-current="page"
+                                    >
+                                        {link.name}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
                 </div>
             </div>
         </div>
